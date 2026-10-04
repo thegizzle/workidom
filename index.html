@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anaïs Marini - Workidom</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-color: #722f37;
-            /* Bordeau */
-            --text-main: #ffffff;
-            /* Blanc pour contraster */
-            --accent-color: #d4af37;
-            /* Or pour l'élégance */
+            --bg-color: #722f37; /* Bordeau */
+            --text-main: #ffffff; /* Blanc pour contraster */
+            --accent-color: #d4af37; /* Or pour l'élégance */
             --card-bg: rgba(255, 255, 255, 0.1);
         }
 
@@ -86,27 +80,34 @@
             border-radius: 50px;
             transition: all 0.3s ease;
         }
-
+        
         .social-btn i {
             font-size: 1.2rem;
         }
-
-        .social-btn:hover {
-            background-color: var(--accent-color);
-            border-color: var(--accent-color);
-            color: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        
+        .btn-icon {
+            height: 1.5rem;
+            width: auto;
+            object-fit: contain;
+            display: block;
         }
 
+        .social-btn:hover {
+            background-color: #B02537;
+            border-color: #B02537;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
         .btn-main {
             background-color: var(--accent-color);
             border-color: var(--accent-color);
         }
-
+        
         .btn-main:hover {
-            background-color: #b5952f;
-            border-color: #b5952f;
+            background-color: #B02537;
+            border-color: #B02537;
         }
 
         /* Background Image Setup */
@@ -127,54 +128,61 @@
         @media (max-width: 1000px) {
             .hero {
                 flex-direction: column;
-                justify-content: center;
+                height: auto;
+                min-height: 100vh;
+                justify-content: flex-start; 
                 text-align: center;
+                padding-top: 2rem;
+            }
+
+            .hero-image {
+                position: relative; /* On annule l'absolute pour les séparer physiquement */
+                width: 100%;
+                height: 45vh; /* L'image prend 45% de la hauteur */
+                background-size: contain; /* S'assure que l'image entière est visible */
+                background-position: bottom center; /* La photo est "posée" sur le texte */
+                order: 1; /* Place l'image en premier (en haut) */
             }
 
             .hero-content {
+                position: relative;
                 max-width: 100%;
-                padding: 2rem 5%;
-                background: rgba(114, 47, 55, 0.6);
-                z-index: 3;
+                padding: 1rem 5% 4rem; 
+                background: transparent; /* Plus besoin de fond dégradé */
+                order: 2; /* Place le texte en dessous de l'image */
             }
 
             .hero h1 {
                 font-size: 3.5rem;
+                margin-top: 0;
             }
 
             .hero p {
                 margin: 0 auto 2.5rem;
+                font-size: 1.1rem;
             }
 
             .social-links {
                 justify-content: center;
             }
-
-            .hero-image {
-                width: 100%;
-                opacity: 1;
-                z-index: 1;
-            }
         }
     </style>
 </head>
-
 <body>
 
     <section class="hero">
         <div class="hero-content">
             <h1>Anaïs Marini</h1>
-            <p>Fondatrice de Workidom.fr, l'écosystème qui réinvente le travail indépendant et à distance pour offrir à
-                chacun la liberté de trouver son bureau idéal.</p>
-
+            <p>Fondatrice de Workidom.fr, l'écosystème qui réinvente le travail indépendant et à distance pour offrir à chacun la liberté de trouver son bureau idéal.</p>
+            
             <div class="social-links">
-                <a href="https://workidom.fr" target="_blank" class="social-btn btn-main">
-                    <i class="fas fa-globe"></i> Workidom.fr
+                <a href="https://workidom.fr" target="_blank" class="social-btn">
+                    <img src="workidom_logo.png" alt="Workidom" class="btn-icon"> Workidom.fr
                 </a>
                 <a href="mailto:contact@workidom.fr" class="social-btn">
                     <i class="fas fa-envelope"></i> Email
                 </a>
-                <a href="https://www.linkedin.com/in/ana%C3%AFsmarini/" target="_blank" class="social-btn">
+                <a href="#" target="_blank" class="social-btn">
                     <i class="fab fa-linkedin-in"></i> LinkedIn
                 </a>
                 <a href="#" target="_blank" class="social-btn">
@@ -189,5 +197,4 @@
     </section>
 
 </body>
-
 </html>
