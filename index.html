@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anaïs Marini - Workidom</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #722f37;
+            /* Bordeau */
+            --text-main: #ffffff;
+            /* Blanc pour contraster */
+            --accent-color: #d4af37;
+            /* Or pour l'élégance */
+            --card-bg: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding: 0 5%;
+            z-index: 2;
+            max-width: 50%;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2.5rem;
+            max-width: 90%;
+            font-weight: 400;
+        }
+
+        /* Social Buttons */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn i {
+            font-size: 1.2rem;
+        }
+
+        .social-btn:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-main {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .btn-main:hover {
+            background-color: #b5952f;
+            border-color: #b5952f;
+        }
+
+        /* Background Image Setup */
+        .hero-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background-image: url('background_nobg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1000px) {
+            .hero {
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .hero-content {
+                max-width: 100%;
+                padding: 2rem 5%;
+                background: rgba(114, 47, 55, 0.6);
+                z-index: 3;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero p {
+                margin: 0 auto 2.5rem;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .hero-image {
+                width: 100%;
+                opacity: 1;
+                z-index: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Anaïs Marini</h1>
+            <p>Fondatrice de Workidom.fr, l'écosystème qui réinvente le travail indépendant et à distance pour offrir à
+                chacun la liberté de trouver son bureau idéal.</p>
+
+            <div class="social-links">
+                <a href="https://workidom.fr" target="_blank" class="social-btn btn-main">
+                    <i class="fas fa-globe"></i> Workidom.fr
+                </a>
+                <a href="mailto:contact@workidom.fr" class="social-btn">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="https://www.linkedin.com/in/ana%C3%AFsmarini/" target="_blank" class="social-btn">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+                <a href="#" target="_blank" class="social-btn">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="#" target="_blank" class="social-btn">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+            </div>
+        </div>
+        <div class="hero-image"></div>
+    </section>
+
+</body>
+
+</html>
